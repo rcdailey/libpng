@@ -17,7 +17,10 @@ set(CMAKE_CONFIGURATION_TYPES "Release;Debug;MinSizeRel;RelWithDebInfo")
 
 project(libpng VERSION 1.6.33 LANGUAGES ASM C)
 
-enable_testing()
+option(BUILD_TESTING "Enable testing" ON)
+if(BUILD_TESTING)
+    enable_testing()
+endif()
 
 set(PNGLIB_NAME libpng${PROJECT_VERSION_MAJOR}${PROJECT_VERSION_MINOR})
 
