@@ -487,7 +487,8 @@ set(png_fix_itxt_sources
 
 if(MSVC)
   add_definitions(-D_CRT_SECURE_NO_DEPRECATE)
-endif(MSVC)
+  add_definitions(/MP) # Support parallel builds on MSVC
+endif()
 
 if(PNG_DEBUG)
   add_definitions(-DPNG_DEBUG)
