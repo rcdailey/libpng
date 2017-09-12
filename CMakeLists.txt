@@ -13,9 +13,7 @@
 
 cmake_minimum_required(VERSION 3.9)
 
-set(CMAKE_CONFIGURATION_TYPES "Release;Debug;MinSizeRel;RelWithDebInfo")
-
-project(libpng VERSION 1.6.33 LANGUAGES ASM C)
+project(libpng VERSION 1.6.33 LANGUAGES C)
 
 option(BUILD_TESTING "Enable testing" ON)
 if(BUILD_TESTING)
